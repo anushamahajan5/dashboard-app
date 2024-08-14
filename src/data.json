@@ -1,0 +1,13 @@
+{
+  "categories": [
+    {
+      "name": "CSPM Executive Dashboard",
+      "widgets": [
+        {
+          "name": "Widget 1",
+          "text": "This is widget 1 and can be used for adding xyz to your cloud account"
+        }
+      ]
+    }
+  ]
+}

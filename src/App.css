@@ -1,7 +1,9 @@
+/* Base styling for the entire app */
 .App {
   text-align: center;
 }
 
+/* Styling for the App logo */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,26 +15,252 @@
   }
 }
 
+/* Styling for the header */
 .App-header {
-  background-color: #282c34;
+  background-color: var(--primary-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--text-color);
 }
 
+/* Link styling */
 .App-link {
-  color: #61dafb;
+  color: var(--secondary-color);
 }
 
+/* Keyframes for spinning the logo */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+body {
+  background-color: rgb(210, 226, 229);
+  /* Change this to your desired color */
+}
+/* New styling for the dashboard */
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Widget styling */
+.widget {
+  background-color: var(--widget-background-color);
+  border: 1px solid var(--widget-border-color);
+  border-radius: 8px;
+  box-shadow: var(--widget-shadow);
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.widget h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.widget p {
+  margin-bottom: 10px;
+}
+
+/* Button styling */
+button {
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-hover-background-color);
+  color: var(--button-hover-text-color);
+}
+
+/* Input field styling */
+input[type="text"],
+select {
+  border: 1px solid var(--input-border-color);
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: var(--input-focus-border-color);
+  outline: none;
+}
+
+/* src/components/WidgetFormModal.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content input,
+.modal-content select {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-buttons button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.modal-buttons button:last-child {
+  background-color: #f5f5f5;
+  color: #333;
+}
+.category{
+  background-color: rgb(219, 234, 237);
+}
+/* Style for the container of widgets under each category rgb(210, 226, 229)*/
+.category-widgets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  /* Adds space between widgets */
+  margin-top: 20px;
+  /* Adds space between the title and the widgets */
+}
+
+/* Widget Box Styling */
+.widget-box {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Button Styling */
+.widget-box button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.widget-box button:hover {
+  background-color: #0056b3;
+}
+
+.widget-box button.remove {
+  background-color: #dc3545;
+}
+
+.widget-box button.remove:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+  .category-widgets {
+    grid-template-columns: 1fr;
+  }
+}
+
+.category-widgets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* Space between widgets */
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  /* Adds space between the buttons */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.button-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.add-category-button {
+  background-color: #4CAF50;
+  /* Green */
+}
+
+.add-widget-button {
+  background-color: #008CBA;
+  /* Blue */
+}
+.button-container {
+  display: flex;
+  gap: 10px;
+  /* Adds space between the buttons */
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.button-container button {
+  padding: 8px 12px;
+  /* Smaller size */
+  border-radius: 4px;
+  cursor: pointer;
 }

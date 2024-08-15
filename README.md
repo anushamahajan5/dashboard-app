@@ -20,6 +20,8 @@ from category list
 2. Use **npm install** to install all the dependencies
 3. Use **npm start** to run the application on localhost.
 
+## Deployed version
+The deployed version via vercel: https://dashboard-app-wdws-kakijjh2z-anushas-projects-65e5849b.vercel.app/
 
 # Getting Started with Create React App
 
